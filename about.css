@@ -1,0 +1,683 @@
+/* <!-- =-========================OVERALL WEB CONTAINER =================== --> */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    /* color: var(--text-color); */
+}
+
+:root {
+    --dark: #262322;
+    --text-color: white;
+    --danger: red;
+    --light-red: rgba(247, 36, 36, 0.821);
+    ---border: rgb(169, 167, 167);
+    --text-color: white;
+    --head-color: black;
+    --danger: red;
+    --light-red: #D80032;
+}
+
+/* <!-- ================= HOME PAGE CREATION ============ --> */
+.Home-page-section {
+    width: 100vw;
+    min-height: 42vh;
+
+}
+
+
+/* <!-- =============TOP NAV BAR CREATION =========== --> */
+.Home-page-section .navbar-section {
+    width: 100%;
+    height: 80px;
+    background-color: var(--dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(---border);
+    position: fixed;
+    z-index: 999999;
+}
+
+.navbar-section .left-logo {
+    min-height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 34%;
+    background-color: #262322;
+}
+
+.navbar-section .left-logo h2 {
+    color: var(--text-color);
+}
+
+.navbar-section .left-logo h2 span {
+    color: var(--danger);
+}
+
+.navbar-section .left-logo i {
+    color: var(--danger);
+    font-size: 29px;
+}
+
+.navbar-section .nav-buttons {
+    /* background-color: blue; */
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.navbar-section input {
+    display: none;
+}
+
+.navbar-section label i {
+    display: none;
+}
+
+/* <!-- ==============NAVBAR BUTTONS CREATION ================ --> */
+
+.Home-page-section .navbar-buttons {
+    width: 100%;
+    /* background-color: var(--dark); */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.Home-page-section .navbar-buttons .nav-left-buttons {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.Home-page-section .navbar-buttons .nav-right-buttons {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.Home-page-section .navbar-buttons .nav-left-buttons a{
+    height: 100%;
+}
+.Home-page-section .navbar-buttons .nav-left-buttons a button {
+    width: 100px;
+    height: 100%;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.Home-page-section .navbar-buttons .nav-right-buttons a {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.Home-page-section .navbar-buttons .nav-right-buttons a i {
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.Home-page-section .navbar-buttons .nav-right-buttons a i:hover {
+    color: var(--danger);
+}
+
+.Home-page-section .navbar-buttons .nav-left-buttons button:hover {
+    color: var(--danger);
+    border-bottom: 2px solid var(--danger);
+    height: 100%;
+}
+.Home-page-section .navbar-buttons .nav-left-buttons .aaa{
+    color: var(--danger);
+    border-bottom: 2px solid var(--danger);
+}
+
+.Home-page-section .navbar-section input:checked~.navbar-buttons {
+    left: 0;
+    transition: 2s;
+}
+
+/* ============================NAVBAR RESPONSIVE DESIGNING=============  */
+@media only screen and (max-width:800px) {
+    .Home-page-section .navbar-buttons {
+        position: fixed;
+        top: 80px;
+        background-color: #262322;
+        width: 80%;
+        height: 85%;
+        left: -100%;
+        transition: 2s;
+        z-index: 999;
+    }
+
+    .Home-page-section .navbar-section .left-logo {
+        width: 80%;
+    }
+
+    .Home-page-section .navbar-section label i {
+        display: inline;
+        margin-right: 30px;
+        color: var(--light-red);
+        font-size: 30px;
+    }
+
+    .Home-page-section .navbar-section .nav-left-buttons {
+        flex-direction: column;
+        gap: 10px;
+
+    }
+
+    .Home-page-section .navbar-section .nav-right-buttons {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:1800px) {
+    .Home-page-section .navbar-section .left-logo i {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .Home-page-section .navbar-section .left-logo h2 {
+        font-size: 16px;
+    }
+
+    .Home-page-section .navbar-section label i {
+        font-size: 23px;
+    }
+}
+/* ===========HOME IMAGE CREATION ============ */
+.Home-page-section .home-image{
+    width: 100vw;
+    height: 30vh;
+    margin-top: 80px;
+    background:url(./IMAGES/breadcrumb.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    /* background-color: rgb(230, 8, 8); */
+}
+.Home-page-section .home-image h1{
+    color: var(--text-color);
+    position: absolute;
+    left: 80px;
+    top: 60px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.first-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    background-color: var(---text-color);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.first-container .left-side {
+    width: 600px;
+    height: 380px;
+    overflow-y: hidden;
+}
+
+.first-container .left-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.first-container .right-side {
+    min-height: 380px;
+    width: 600px;
+    padding: 10px;
+}
+
+.first-container .right-side h1 {
+    margin-top: 20px;
+    color: var(--head-color);
+    font-size: 25px;
+    font-family: sans-serif;
+}
+
+.first-container .right-side hr {
+    width: 60px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border: 1px solid var(--light-red);
+}
+
+.first-container .right-side p {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.first-container .right-side button {
+    padding: 15px;
+    width: 180px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--light-red);
+    color: rgb(255, 255, 255);
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+/* ==========================================HOVER======================================== */
+.first-container .right-side button:hover {
+    transition: 2s;
+    background-color: black;
+}
+
+/* ====================================SECOND CONTAINER================================== */
+.second-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(./IMAGES/onroad.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 400px;
+    width: 100%;
+}
+
+.second-container .pointer {
+    min-height: 50%;
+    width: 100%;
+    padding: 50px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.second-container .pointer .point {
+    width: 200px;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* .second-container .pointer .icons {
+    background-color: var(--light-red);
+    min-height: 50px;
+    width: 50px;
+    border-radius: 50%;
+} */
+
+.second-container .point .icons {
+    background-color: var(--light-red);
+    font-size: 30px;
+    min-height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    overflow-y: hidden;
+}
+
+.second-container .point h4 {
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    color: var(--text-color)
+}
+
+.second-container .point h3 {
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+/* ======================================THIRD CONTAINER==================================== */
+.third-container {
+    min-height: 400px;
+    width: 100%;
+    /* background-color: #D80032; */
+}
+
+.third-container .head-line{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0 0 0;
+}
+
+.third-container .head-line h3 {
+    color: var(--light-red);
+    padding-bottom: 10px;
+}
+
+.third-container .head-line h1 {
+    margin-bottom: 25px;
+}
+
+.third-container .head-line hr {
+    width: 70px;
+    border: 1px solid var(--light-red);
+    margin-bottom: 40px;
+}
+
+.third-container .head-line p {
+    width: 900px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 19px;
+}
+
+/* ===============================FOURTH CONTAINER======================================== */
+.fourth-container {
+    min-height: 100%;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.fourth-container .travel {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  
+}
+.fourth-container .travel .imges {
+    width: 400px;
+}
+.fourth-container .travel .imges img {
+    height: 250px;
+    width: 100%;
+}
+
+.fourth-container .travel h2 {
+    margin: 20px 0;
+}
+
+.fourth-container .travel p {
+    line-height: 30px;
+}
+
+/* =================================FIVE CONTAINER===================================== */
+.five-container {
+    background-color: var(--light-red);
+    height: 300px;
+    width: 100%;
+}
+
+.five-container .choose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.five-container .choose h1 {
+    color: var(--text-color);
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+.five-container .choose hr {
+    width: 50px;
+    margin-bottom: 40px;
+}
+
+.five-container .choose p {
+    color: var(--text-color);
+    width: auto;
+    text-align: center;
+}
+
+/* =================================SIX CONTAINER================================== */
+.six-container {
+    background-color: var(--light-red);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.six-container .six {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 350px;
+    margin: 10px;
+    padding: 10px;
+    gap: 20px;
+    min-height: 200px;
+}
+
+.six-container .six .icons {
+
+    font-size: 30px;
+    color: var(--text-color);
+}
+.six-container .six .details{
+    width: 70%;
+}
+.six-container .six .details h2 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.six-container .six .details p {
+    line-height: 25px;
+    color: var(--text-color);
+}
+
+/* ==========================================MEDIA QUERY=================================== */
+@media only screen and (max-width:800px) {
+    .first-container .left-side {
+        margin: 10px;
+        border: 1px solid black;
+    }
+
+    .second-container {
+        margin-top: 250px;
+    }
+
+    .second-container .pointer .point {
+        margin-bottom: 100px;
+    }
+
+    .third-container .head-line p {
+        width: 250px;
+    }
+
+    .fourth-container {
+        margin-top: 200px;
+    }
+
+    .fourth-container .travel {
+        flex-wrap: wrap;
+    }
+
+    .fourth-container .travel .imges {
+        width: auto;
+        padding: 10px;
+    }
+
+    .fourth-container .travel p {
+        font-size: 15px;
+    }
+}
+
+/* ===============================================MEDIA QUERY FOR PC============================================== */
+@media only screen and (min-width:1400px) {
+    .first-container .right-side {
+        width: 35%;
+    }
+    .first-container .right-side h1 {
+        font-size: 30px;
+    }
+    .six-container {
+        min-height: 60vh;
+    }
+    .six-container .six {
+        width: 500px;
+    }
+}
+
+/* <!-- =======================FOOTER BOX CREATION DESIGN============================ --> */
+
+.footer-box {
+    width: 100vw;
+    min-height: 60vh;
+    background-color: rgb(18, 6, 6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0;
+    flex-wrap: wrap;
+
+}
+
+.footer-box .footer-inner-box1 {
+    width: 310px;
+    padding: 10px;
+    /* background-color: aqua; */
+}
+
+.footer-box .footer-inner-box1 h2 i {
+    overflow-y: hidden;
+}
+
+.footer-box .footer-inner-box1 h2 {
+    color: var(--text-color);
+}
+
+.footer-box .footer-inner-box1 p {
+    margin: 20px 0;
+    line-height: 25px;
+    color: var(---border);
+}
+.footer-box .footer-inner-box1 h2 span {
+    color: var(--danger);
+}
+.footer-box .footer-inner-box1 .footer-inner-icones {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+}
+.footer-box .footer-inner-box1 .footer-inner-icones a {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer-box .footer-inner-box1 .footer-inner-icones a:first-child {
+    background-color: blue;
+}
+
+.footer-box .footer-inner-box1 .footer-inner-icones a:last-child {
+    background-color: rgb(210, 50, 50);
+}
+
+.footer-box .footer-inner-box2 {
+    /* background-color: blue; */
+    width: 310px;
+    padding: 10px;
+}
+
+.footer-box .footer-inner-box2 h3 {
+    color: var(--text-color);
+    font-size: 25px;
+}
+
+.footer-box .footer-inner-box2 p {
+    margin: 15px 0;
+    font-weight: bold;
+    color: var(---border);
+    text-align: left;
+}
+
+.footer-box .footer-inner-box2 p:hover {
+    color: var(--light-red);
+}
+
+.footer-box .footer-inner-box2 p span i {
+    color: var(--text-color);
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.footer-box .footer-inner-box3 {
+    /* background-color: aqua; */
+    padding: 10px;
+    width: 310px;
+
+}
+
+.footer-box .footer-inner-box3 .inner-box3-first h3 {
+    color: var(--text-color);
+    font-size: 25px;
+
+}
+
+.footer-box .footer-inner-box3 .inner-box3-first p {
+    color: var(---border);
+    margin: 20px 0;
+    text-align: left;
+
+}
+
+.footer-box .footer-inner-box3 .inner-box3-first p span i {
+    color: var(--light-red);
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.footer-box .footer-inner-box3 .inner-box3-second h3 {
+    color: var(--text-color);
+    font-size: 25px;
+}
+
+.footer-box .footer-inner-box3 .inner-box3-second p {
+    margin: 15px 0;
+    color: var(---border);
+}
+
+@media only screen and (max-width:800px) {
+    .footer-box {}
+}

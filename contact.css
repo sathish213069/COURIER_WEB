@@ -1,0 +1,556 @@
+/* <!-- =-========================OVERALL WEB CONTAINER =================== --> */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    /* color: var(--text-color); */
+}
+
+:root {
+    --dark: #262322;
+    --text-color: white;
+    --danger: red;
+    --light-red: rgba(247, 36, 36, 0.821);
+    ---border: rgb(169, 167, 167);
+    --text-color: white;
+    --head-color: black;
+    --danger: red;
+    --light-red: #D80032;
+ }
+
+
+/* <!-- ================= HOME PAGE CREATION ============ --> */
+.Home-page-section {
+    width: 100vw;
+    min-height: 42vh;
+}
+
+/* <!-- =============TOP NAV BAR CREATION =========== --> */
+.Home-page-section .navbar-section {
+    width: 100%;
+    height: 80px;
+    background-color: var(--dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(---border);
+    position: fixed;
+    z-index: 999999;
+}
+
+.navbar-section .left-logo {
+    min-height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 34%;
+    background-color: #262322;
+}
+
+.navbar-section .left-logo h2 {
+    color: var(--text-color);
+}
+
+.navbar-section .left-logo h2 span {
+    color: var(--danger);
+}
+
+.navbar-section .left-logo i {
+    color: var(--danger);
+    font-size: 29px;
+}
+
+.navbar-section .nav-buttons {
+    /* background-color: blue; */
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.navbar-section input {
+    display: none;
+}
+
+.navbar-section label i {
+    display: none;
+}
+
+/* <!-- ==============NAVBAR BUTTONS CREATION ================ --> */
+
+.Home-page-section .navbar-buttons {
+    width: 100%;
+    /* background-color: var(--dark); */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.Home-page-section .navbar-buttons .nav-left-buttons {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.Home-page-section .navbar-buttons .nav-right-buttons {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.Home-page-section .navbar-buttons .nav-left-buttons a{
+    height: 100%;
+}
+.Home-page-section .navbar-buttons .nav-left-buttons a button {
+    width: 100px;
+    height: 100%;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.Home-page-section .navbar-buttons .nav-right-buttons a {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.Home-page-section .navbar-buttons .nav-right-buttons a i {
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.Home-page-section .navbar-buttons .nav-right-buttons a i:hover {
+    color: var(--danger);
+}
+
+.Home-page-section .navbar-buttons .nav-left-buttons button:hover {
+    color: var(--danger);
+    border-bottom: 2px solid var(--danger);
+    height: 100%;
+}
+.Home-page-section .navbar-buttons .nav-left-buttons .aaa{
+    color: var(--danger);
+    border-bottom: 2px solid var(--danger);
+}
+
+.Home-page-section .navbar-section input:checked~.navbar-buttons {
+    left: 0;
+    transition: 2s;
+}
+
+/* ============================NAVBAR RESPONSIVE DESIGNING=============  */
+@media only screen and (max-width:800px) {
+    .Home-page-section .navbar-buttons {
+        position: fixed;
+        top: 80px;
+        background-color: #262322;
+        width: 80%;
+        height: 85%;
+        left: -100%;
+        transition: 2s;
+        z-index: 999;
+    }
+
+    .Home-page-section .navbar-section .left-logo {
+        width: 80%;
+    }
+
+    .Home-page-section .navbar-section label i {
+        display: inline;
+        margin-right: 30px;
+        color: var(--light-red);
+        font-size: 30px;
+    }
+
+    .Home-page-section .navbar-section .nav-left-buttons {
+        flex-direction: column;
+        gap: 10px;
+
+    }
+
+    .Home-page-section .navbar-section .nav-right-buttons {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:1800px) {
+    .Home-page-section .navbar-section .left-logo i {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .Home-page-section .navbar-section .left-logo h2 {
+        font-size: 16px;
+    }
+
+    .Home-page-section .navbar-section label i {
+        font-size: 23px;
+    }
+}
+/* ===========HOME IMAGE CREATION ============ */
+.Home-page-section .home-image{
+    width: 100vw;
+    min-height: 30vh;
+    margin-top: 80px;
+    background:url(./IMAGES/breadcrumb.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.Home-page-section .home-image h1{
+    color: var(--text-color);
+    position: absolute;
+    left: 80px;
+    top: 60px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+/* ======================================FIRST-CONTAINER=======================   */
+.first-container {
+   width: 100%;
+   min-height: 100vh;
+   background-color: var(--text-color);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+   flex-wrap: wrap;
+
+}
+
+.first-container .maps {
+   width: 700px;
+   height: 400px;
+   overflow-y: hidden;
+   border-radius: 5px;
+}
+
+.first-container .right-side {
+   width: 400px;
+   height: 400px;
+
+}
+
+.first-container .right-side .contact {
+   display: flex;
+   justify-content: center;
+   align-items: start;
+   width: 350px;
+   padding: 10px 0 ; 
+
+}
+
+.first-container .right-side .contact .icons {
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   background-color: var(--text-color);
+   color: var(--light-red);
+   display: flex;
+   justify-content:center;
+   align-items: center;
+}
+
+.first-container .right-side .contact .icons i {
+   font-size: 20px;
+}
+
+.first-container .right-side .contact .details {
+   width:85%;
+   margin-left: 10px;
+}
+
+.first-container .right-side .contact .details p{
+   margin-bottom: 10px;
+   line-height: 30px;
+}
+
+
+/* ===================================================SECOND CONTAINER============= */
+.second-container {
+   width: 100%;
+}
+
+.second-container .message {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+
+}
+
+.second-container .message h4 {
+   color: var(--light-red);
+}
+
+.second-container .message h1 {
+   padding: 10px;
+   padding-bottom: 20px;
+}
+
+
+.second-container .message hr {
+   width: 50px;
+   border: 1px solid var(--light-red);
+}
+
+/* ======================================INPUT CONTAINER================================ */
+
+.input-container {
+   background-color: var(--text-color);
+   min-height: 600px;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+
+}
+
+.input-container form{
+   width: 800px;
+   padding: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 10px 50px;
+   margin-top: 0px;
+
+}
+
+.input-container input {
+   width: 350px;
+   padding: 10px;
+   height: 50px;
+   margin-top: 20px;
+   border-radius: 5px;
+   box-shadow: 2px 2px 10px black;
+   outline: 0;
+   border: none;
+}
+
+.input-container form textarea {
+   width:100%;
+   margin-top: 50px;
+   border-radius: 5px;
+   box-shadow: 2px 2px 10px black;
+   padding: 10px;
+   outline:0;
+   border: none;
+}
+
+textarea::placeholder {
+   font-size: 15px;
+}
+
+.input-container form button {
+   padding: 10px;
+   background-color: var(--light-red);
+   color: var(--text-color);
+   width: 150px;
+   border-radius: 5px;
+   border: none;
+   margin-top: 30px;
+   cursor: pointer
+}
+ .input-container form button:hover{
+    background-color: rgb(24, 207, 24);
+ }
+
+
+/* ==============================================MEDIA QUERY============================== */
+
+@media only screen and (max-width:800px) {
+
+.first-container .maps {
+      width: auto;
+      margin: 10px;
+   }
+
+.first-container .left-side {
+      width: 90%;
+      margin: 10px;
+   }
+.first-container .left-side .contact  {
+   width:auto;
+}
+
+
+.first-container .left-side .contact .details{
+      width: 80%;
+   }
+
+.second-container  .message h1{
+     text-align: center;
+
+}
+.input-container{
+    padding-bottom: 50px
+}
+.input-container form{
+   flex-direction: column;
+   min-width:300px;
+
+}
+.input-container form input{
+   width:100%;
+}
+
+form.aa{
+   width: 300px;
+}
+}
+/* <!-- =======================FOOTER BOX CREATION DESIGN============================ --> */
+
+.footer-box {
+    width: 100vw;
+    min-height: 60vh;
+    background-color: rgb(18, 6, 6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0;
+    flex-wrap: wrap;
+
+}
+
+.footer-box .footer-inner-box1 {
+    width: 310px;
+    padding: 10px;
+    /* background-color: aqua; */
+}
+
+.footer-box .footer-inner-box1 h2 i {
+    overflow-y: hidden;
+}
+
+.footer-box .footer-inner-box1 h2 {
+    color: var(--text-color);
+}
+
+.footer-box .footer-inner-box1 p {
+    margin: 20px 0;
+    line-height: 25px;
+    color: var(---border);
+}
+.footer-box .footer-inner-box1 h2 span {
+    color: var(--danger);
+}
+.footer-box .footer-inner-box1 .footer-inner-icones {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-box .footer-inner-box1 .footer-inner-icones a {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer-box .footer-inner-box1 .footer-inner-icones a:first-child {
+    background-color: blue;
+}
+
+.footer-box .footer-inner-box1 .footer-inner-icones a:last-child {
+    background-color: rgb(210, 50, 50);
+}
+
+
+
+.footer-box .footer-inner-box2 {
+    /* background-color: blue; */
+    width: 310px;
+    padding: 10px;
+}
+
+.footer-box .footer-inner-box2 h3 {
+    color: var(--text-color);
+    font-size: 25px;
+}
+
+.footer-box .footer-inner-box2 p {
+    margin: 15px 0;
+    font-weight: bold;
+    color: var(---border);
+    text-align: left;
+}
+
+.footer-box .footer-inner-box2 p:hover {
+    color: var(--light-red);
+}
+
+.footer-box .footer-inner-box2 p span i {
+    color: var(--text-color);
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.footer-box .footer-inner-box3 {
+    /* background-color: aqua; */
+    padding: 10px;
+    width: 310px;
+
+}
+
+.footer-box .footer-inner-box3 .inner-box3-first h3 {
+    color: var(--text-color);
+    font-size: 25px;
+
+}
+
+.footer-box .footer-inner-box3 .inner-box3-first p {
+    color: var(---border);
+    margin: 20px 0;
+    text-align: left;
+
+}
+
+.footer-box .footer-inner-box3 .inner-box3-first p span i {
+    color: var(--light-red);
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.footer-box .footer-inner-box3 .inner-box3-second h3 {
+    color: var(--text-color);
+    font-size: 25px;
+}
+
+.footer-box .footer-inner-box3 .inner-box3-second p {
+    margin: 15px 0;
+    color: var(---border);
+}
+
+@media only screen and (max-width:800px) {
+    .footer-box {}
+}
