@@ -152,7 +152,7 @@
 
 .Home-page-section .navbar-section input:checked~.navbar-buttons {
     left: 0;
-    transition: 2s;
+    transition: 1s;
 }
 
 /* ============================NAVBAR RESPONSIVE DESIGNING=============  */
@@ -164,7 +164,7 @@
         width: 80%;
         height: 85%;
         left: -100%;
-        transition: 2s;
+        transition: 1s;
         z-index: 999;
     }
 
