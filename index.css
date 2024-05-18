@@ -471,7 +471,6 @@
     font-size: 30px;
     border: 2px solid var(--text-color);
     flex-wrap: wrap;
-    overflow-y: none;
 
 }
 
@@ -514,10 +513,13 @@
     .home-bottom-details .bottom-inner-box .inner-small {
         flex-wrap: wrap;
         text-align: left;
-       height: 300px;
+        height: 300px;
         
     }
 
+    .home-bottom-details .bottom-inner-box .inner-small .inner-icone{
+        font-size: 25px;
+    }
     .home-bottom-details .bottom-box-details {
         padding-bottom: 400px;
     }
